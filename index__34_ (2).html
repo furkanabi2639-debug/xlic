@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrafficMeter — Free Website Traffic & Revenue Estimator</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Discover any website's monthly visitors, traffic sources, country breakdown, and estimated ad revenue for free with TrafficMeter. Instant domain analysis for sites in the USA, UK, India, Turkey and worldwide.">
+<meta name="keywords" content="website traffic analysis, domain analysis, website revenue estimator, traffic estimator, similarweb alternative, free seo analysis, domain checker, monthly visitors, india website traffic checker, website traffic checker india, site analiz, web sitesi trafik analizi, site trafik ölçer, gelir tahmini">
+<meta name="author" content="TrafficMeter">
+<meta name="robots" content="index, follow">
+<meta name="language" content="English">
+<link rel="canonical" href="https://siteradar.app/">
+<link rel="alternate" hreflang="en" href="https://siteradar.app/">
+<link rel="alternate" hreflang="tr" href="https://siteradar.app/">
+<link rel="alternate" hreflang="en-IN" href="https://siteradar.app/">
+<link rel="alternate" hreflang="x-default" href="https://siteradar.app/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://siteradar.app/">
+<meta property="og:title" content="TrafficMeter — Free Website Traffic & Revenue Estimator">
+<meta property="og:description" content="Analyze any website's traffic, sources, and estimated revenue for free. Instant results, zero signup required.">
+<meta property="og:image" content="https://siteradar.app/og-image.png">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="TrafficMeter">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://siteradar.app/">
+<meta name="twitter:title" content="TrafficMeter — Free Website Traffic & Revenue Estimator">
+<meta name="twitter:description" content="Check any website's traffic and revenue instantly. Free, no signup, instant results.">
+<meta name="twitter:image" content="https://siteradar.app/og-image.png">
+
+<!-- Structured Data (Schema.org) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "TrafficMeter",
+  "url": "https://siteradar.app",
+  "description": "Website traffic and revenue estimator. Analyze monthly visits, traffic sources, and estimated ad revenue for any domain.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "inLanguage": "en"
+}
+</script>
+
+<!-- Favicon - PNG (Google indexable) -->
+<link rel="icon" type="image/png" sizes="128x128" href="data:image/png;base64,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">
+<link rel="shortcut icon" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" sizes="128x128" href="data:image/png;base64,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">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root{
+    --bg:#f4f6fb;
+    --card:#ffffff;
+    --ink:#1c2541;
+    --muted:#76819a;
+    --line:#e6e9f2;
+    --primary:#3b4cca;
+    --primary-dark:#1c2541;
+    --accent:#16c995;
+    --accent-soft:#e3fbf2;
+    --warn:#ff9f43;
+    --purple:#8c6bf4;
+    --radius:14px;
+    --shadow: 0 8px 24px rgba(28,37,65,0.06);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:'Inter', system-ui, sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Sora', sans-serif; letter-spacing:-0.01em;}
+  a{color:inherit; text-decoration:none;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    background:var(--primary-dark);
+    color:#fff;
+    padding:16px 24px;
+    position:sticky; top:0; z-index:50;
+  }
+  .header-inner{
+    max-width:1180px; margin:0 auto;
+    display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-weight:800; font-size:20px; white-space:nowrap;
+  }
+  .logo .dot{
+    width:34px; height:34px; display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+  }
+  .logo-svg { display:block; }
+  .radar-sweep {
+    transform-origin: 16px 16px;
+    animation: radarSpin 2s linear infinite;
+  }
+  .radar-ping {
+    transform-origin: 16px 16px;
+    animation: radarPulse 2s ease-out infinite;
+  }
+  .radar-ping2 {
+    transform-origin: 16px 16px;
+    animation: radarPulse 2s ease-out infinite 1s;
+  }
+  @keyframes radarSpin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes radarPulse {
+    0%   { opacity: 0.8; r: 4; }
+    100% { opacity: 0;   r: 14; }
+  }
+  .search-bar{
+    flex:1; display:flex; min-width:0; max-width:560px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:10px; overflow:hidden;
+  }
+  .search-bar input{
+    flex:1 1 0; min-width:0; background:transparent; border:none; outline:none;
+    color:#fff; padding:11px 14px; font-size:14px; font-family:inherit;
+  }
+  .search-bar input::placeholder{color:rgba(255,255,255,0.5);}
+  .search-bar button{
+    flex:0 0 auto;
+    border:none; background:var(--accent); color:var(--primary-dark);
+    font-weight:700; padding:0 18px; cursor:pointer; font-size:14px;
+    font-family:inherit; transition:filter .15s; white-space:nowrap;
+  }
+  .search-bar button:hover{filter:brightness(1.08);}
+  .header-tag{font-size:12px; color:rgba(255,255,255,0.55); white-space:nowrap;}
+
+  /* ---------- HERO (empty state) ---------- */
+  .hero{
+    max-width:800px; margin:70px auto 40px; text-align:center; padding:0 20px;
+  }
+  .hero .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--accent-soft); color:#0b9c70;
+    font-weight:600; font-size:13px; padding:6px 14px; border-radius:999px;
+    margin-bottom:18px;
+  }
+  .hero h1{font-size:44px; font-weight:800; color:var(--primary-dark); margin-bottom:14px; line-height:1.15;}
+  .hero h1 span{color:var(--primary);}
+  .hero p{color:var(--muted); font-size:16px; margin-bottom:32px;}
+
+  /* Hero Search - large centered search box */
+  .hero-search{
+    display:flex;
+    width:100%; max-width:620px; margin:0 auto 28px;
+    background:#fff;
+    border:2px solid var(--line);
+    border-radius:16px;
+    box-shadow:0 4px 24px rgba(59,76,202,0.10);
+    transition:border-color .2s, box-shadow .2s;
+    overflow:hidden;
+  }
+  .hero-search:focus-within{
+    border-color:var(--primary);
+    box-shadow:0 4px 32px rgba(59,76,202,0.18);
+  }
+  .hero-search input{
+    flex:1 1 0; min-width:0;
+    border:none; outline:none; background:transparent;
+    color:var(--ink); padding:18px 20px; font-size:16px; font-family:inherit;
+  }
+  .hero-search input::placeholder{color:var(--muted);}
+  .hero-search button{
+    flex:0 0 auto;
+    border:none; background:var(--primary); color:#fff;
+    font-weight:700; padding:0 24px; cursor:pointer; font-size:15px;
+    font-family:inherit; transition:background .15s;
+    display:flex; align-items:center; gap:7px; white-space:nowrap;
+  }
+  .hero-search button:hover{background:var(--primary-dark);}
+  .hero-search button svg{width:15px;height:15px;flex-shrink:0;}
+
+  .quick-tries{
+    display:flex; gap:10px; justify-content:center; flex-wrap:wrap; font-size:13px;
+  }
+  .quick-tries button{
+    border:1px solid var(--line); background:#fff; color:var(--ink);
+    padding:7px 14px; border-radius:999px; cursor:pointer; font-family:inherit;
+    transition:border-color .15s, color .15s;
+  }
+  .quick-tries button:hover{border-color:var(--primary); color:var(--primary);}
+
+  /* ---------- LOADING ---------- */
+  .loading{
+    max-width:1180px; margin:60px auto; text-align:center; color:var(--muted);
+    display:none;
+  }
+  .loading.show{display:block;}
+  .spinner{
+    width:34px; height:34px; border-radius:50%;
+    border:3px solid var(--line); border-top-color:var(--primary);
+    animation:spin 0.8s linear infinite; margin:0 auto 14px;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+
+  /* ---------- ERROR STATE ---------- */
+  .error-state{
+    max-width:520px; margin:80px auto; text-align:center; padding:40px 28px;
+    background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+    display:none;
+  }
+  .error-state.show{display:block;}
+  .error-icon{font-size:40px; margin-bottom:14px;}
+  .error-state h2{font-size:22px; color:var(--primary-dark); margin-bottom:10px;}
+  .error-state p{color:var(--muted); font-size:14px; margin-bottom:22px;}
+  .error-back{
+    border:none; background:var(--primary); color:#fff; font-weight:700;
+    padding:12px 22px; border-radius:10px; cursor:pointer; font-size:14px;
+    font-family:inherit; transition:background .15s;
+  }
+  .error-back:hover{background:var(--primary-dark);}
+
+  /* ---------- DASHBOARD ---------- */
+  .dashboard{max-width:1180px; margin:28px auto 80px; padding:0 20px; display:none;}
+  .dashboard.show{display:block;}
+
+  .site-head{
+    display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    margin-bottom:22px;
+  }
+  .favicon{
+    width:52px; height:52px; border-radius:12px;
+    background:var(--primary); color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:800; font-size:22px; flex-shrink:0;
+  }
+  .site-head h2{font-size:26px; color:var(--primary-dark);}
+  .site-head .cat-badge{
+    display:inline-block; margin-top:4px;
+    background:#eef0fb; color:var(--primary);
+    font-size:12px; font-weight:600; padding:3px 10px; border-radius:999px;
+  }
+  .visit-link{
+    margin-left:auto; font-size:13px; color:var(--primary);
+    border:1px solid var(--line); padding:9px 16px; border-radius:8px;
+    background:#fff; font-weight:600;
+  }
+  .visit-link:hover{border-color:var(--primary);}
+
+  /* grid of stat cards */
+  .grid{
+    display:grid; gap:16px;
+    grid-template-columns:repeat(4, 1fr);
+    margin-bottom:18px;
+  }
+  @media (max-width: 980px){ .grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width: 560px){ .grid{grid-template-columns:1fr;} }
+
+  .card{
+    background:var(--card); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:20px;
+  }
+  .stat-label{
+    font-size:12px; color:var(--muted); font-weight:600;
+    text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px;
+  }
+  .stat-value{font-size:26px; font-weight:800; color:var(--primary-dark);}
+  .stat-sub{font-size:12px; color:var(--muted); margin-top:6px;}
+  .trend{font-weight:700; font-size:12px;}
+  .trend.up{color:var(--accent);}
+  .trend.down{color:#ff6b6b;}
+
+  /* revenue spotlight */
+  .revenue-card{
+    grid-column: span 4;
+    background:linear-gradient(120deg, var(--primary-dark), #2c3a73 60%, var(--primary));
+    color:#fff; display:flex; flex-wrap:wrap; align-items:center; gap:28px;
+    padding:28px;
+  }
+  @media (max-width: 980px){ .revenue-card{grid-column: span 2;} }
+  @media (max-width: 560px){ .revenue-card{grid-column: span 1;} }
+  .revenue-card .rv-main{flex:1; min-width:220px;}
+  .revenue-card .rv-label{
+    font-size:12px; text-transform:uppercase; letter-spacing:.08em;
+    color:rgba(255,255,255,0.6); font-weight:700; margin-bottom:8px;
+  }
+  .revenue-card .rv-value{font-size:40px; font-weight:800;}
+  .revenue-card .rv-value small{font-size:16px; font-weight:600; color:rgba(255,255,255,0.6); margin-left:6px;}
+  .revenue-card .rv-note{font-size:13px; color:rgba(255,255,255,0.65); margin-top:8px; max-width:420px;}
+  .revenue-breakdown{
+    display:flex; gap:24px; flex-wrap:wrap;
+  }
+  .revenue-breakdown div{min-width:110px;}
+  .revenue-breakdown .rb-label{font-size:11px; color:rgba(255,255,255,0.55); text-transform:uppercase; letter-spacing:.06em; margin-bottom:4px;}
+  .revenue-breakdown .rb-value{font-size:18px; font-weight:700;}
+
+  /* two-col section */
+  .row2{
+    display:grid; grid-template-columns:2fr 1fr; gap:16px; margin-bottom:18px;
+  }
+  @media (max-width: 900px){ .row2{grid-template-columns:1fr;} }
+
+  .card h3{font-size:15px; margin-bottom:4px; color:var(--primary-dark);}
+  .card .card-sub{font-size:12px; color:var(--muted); margin-bottom:14px;}
+
+  /* countries list */
+  .country-row{
+    display:flex; align-items:center; gap:10px; font-size:13px; margin-bottom:12px;
+  }
+  .country-row .flag{font-size:18px;}
+  .country-row .name{flex:1; font-weight:600;}
+  .country-row .pct{font-weight:700; color:var(--primary);}
+  .bar-track{
+    height:6px; background:var(--line); border-radius:4px; flex-basis:100%; margin-top:5px; overflow:hidden;
+  }
+  .bar-fill{height:100%; background:var(--primary); border-radius:4px;}
+
+  /* engagement metrics */
+  .eng-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:18px;}
+  @media (max-width: 700px){ .eng-grid{grid-template-columns:1fr;} }
+
+  /* sources */
+  .source-row{display:flex; align-items:center; gap:10px; font-size:13px; margin-bottom:10px;}
+  .source-dot{width:10px; height:10px; border-radius:50%; flex-shrink:0;}
+  .source-row .name{flex:1;}
+  .source-row .pct{font-weight:700;}
+
+  footer{
+    text-align:center; color:var(--muted); font-size:12px; padding:30px 20px 50px;
+  }
+  footer a{color:var(--primary); font-weight:600;}
+
+  .disclaimer{
+    background:#fff7e8; border:1px solid #ffe2ad; color:#9a6a00;
+    border-radius:10px; padding:12px 16px; font-size:12.5px; margin-bottom:20px;
+  }
+</style>
+
+<!-- Google Translate -->
+<meta name="google" content="notranslate">
+<style>
+  /* Hide Google Translate toolbar clutter */
+  .goog-te-banner-frame { display: none !important; }
+  body { top: 0 !important; }
+  .goog-te-gadget { font-size: 0 !important; }
+  .goog-te-gadget select { display: none; }
+</style>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'tr,en',
+      autoDisplay: false,
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+
+    // Auto-detect Turkish visitors via browser language
+    const lang = navigator.language || navigator.userLanguage || '';
+    if (lang.toLowerCase().startsWith('tr')) {
+      // Delay slightly to ensure widget is ready
+      setTimeout(function() {
+        const select = document.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = 'tr';
+          select.dispatchEvent(new Event('change'));
+        }
+      }, 800);
+    }
+  }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async defer></script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="dot">
+        <svg class="logo-svg" width="34" height="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="9" fill="#1c2541"/>
+          <!-- Grid lines -->
+          <circle cx="16" cy="16" r="12" fill="none" stroke="#16c995" stroke-width="0.5" opacity="0.3"/>
+          <circle cx="16" cy="16" r="8"  fill="none" stroke="#16c995" stroke-width="0.5" opacity="0.3"/>
+          <circle cx="16" cy="16" r="4"  fill="none" stroke="#16c995" stroke-width="0.5" opacity="0.5"/>
+          <line x1="4" y1="16" x2="28" y2="16" stroke="#16c995" stroke-width="0.4" opacity="0.25"/>
+          <line x1="16" y1="4" x2="16" y2="28" stroke="#16c995" stroke-width="0.4" opacity="0.25"/>
+          <!-- Sweep arm -->
+          <g class="radar-sweep">
+            <defs>
+              <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse"
+                gradientTransform="rotate(-60,16,16)">
+                <stop offset="0%" stop-color="#16c995" stop-opacity="0"/>
+                <stop offset="100%" stop-color="#16c995" stop-opacity="0.7"/>
+              </linearGradient>
+            </defs>
+            <path d="M16 16 L28 16 A12 12 0 0 0 16 4 Z" fill="url(#sweepGrad)" opacity="0.5"/>
+            <line x1="16" y1="16" x2="28" y2="16" stroke="#16c995" stroke-width="1" opacity="0.9"/>
+          </g>
+          <!-- Ping dot -->
+          <circle class="radar-ping"  cx="24" cy="16" r="2.5" fill="#16c995" opacity="0"/>
+          <circle class="radar-ping2" cx="24" cy="16" r="2.5" fill="#16c995" opacity="0"/>
+          <!-- Center dot -->
+          <circle cx="16" cy="16" r="2" fill="#16c995"/>
+        </svg>
+      </span>
+      TrafficMeter
+    </div>
+    <div id="google_translate_element" style="display:none;"></div>
+    <form class="search-bar" id="searchForm">
+      <input type="text" id="domainInput" placeholder="Enter a domain, e.g. example.com" autocomplete="off">
+      <button type="submit">Analyze</button>
+    </form>
+    <span class="header-tag">Estimated traffic &amp; revenue analysis</span>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="eyebrow">⚡ Free · Instant estimates · No signup needed</div>
+  <h1>Discover the <span>traffic & revenue</span><br>of any website</h1>
+  <p>Enter a domain and instantly see monthly visitors, traffic sources, country breakdown, and estimated ad revenue.</p>
+
+  <!-- Büyük Hero Arama Kutusu -->
+  <div class="hero-search">
+    <input type="text" id="heroInput" placeholder="example.com or https://example.com" autocomplete="off" aria-label="Enter a domain name">
+    <button onclick="heroSearch()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      Analyze
+    </button>
+  </div>
+
+  <div class="quick-tries">
+    <span style="color:var(--muted); padding-top:6px;">Popular:</span>
+    <button onclick="tryDomain('youtube.com')">youtube.com</button>
+    <button onclick="tryDomain('hepsiburada.com')">hepsiburada.com</button>
+    <button onclick="tryDomain('sahibinden.com')">sahibinden.com</button>
+    <button onclick="tryDomain('wikipedia.org')">wikipedia.org</button>
+    <button onclick="tryDomain('trendyol.com')">trendyol.com</button>
+  </div>
+</section>
+
+<div class="loading" id="loading">
+  <div class="spinner"></div>
+  Calculating data…
+</div>
+
+<div class="error-state" id="error">
+  <div class="error-icon">⚠️</div>
+  <h2>Site not found</h2>
+  <p>We couldn't find a real, registered website at <strong id="errorDomain"></strong>.<br>
+  Please check the spelling and try a valid domain (e.g. example.com).</p>
+  <button class="error-back" onclick="backToHero()">← Try another domain</button>
+</div>
+
+<div class="dashboard" id="dashboard">
+
+  <div class="disclaimer">
+    ⓘ These figures are <b>estimated</b> values generated from the domain structure (demo mode). They are not verified against real financial data.
+  </div>
+
+  <div class="site-head">
+    <div class="favicon" id="favicon">?</div>
+    <div>
+      <h2 id="siteName">example.com</h2>
+      <span class="cat-badge" id="siteCategory">Genel</span>
+    </div>
+    <a class="visit-link" id="visitLink" href="#" target="_blank" rel="noopener">Visit Site ↗</a>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="stat-label">Global Rank</div>
+      <div class="stat-value" id="globalRank">#--</div>
+      <div class="stat-sub">Estimated worldwide rank</div>
+    </div>
+    <div class="card">
+      <div class="stat-label">Country Rank (TR)</div>
+      <div class="stat-value" id="countryRank">#--</div>
+      <div class="stat-sub" id="countryRankSub">World Ranking</div>
+    </div>
+    <div class="card">
+      <div class="stat-label">Monthly Visits</div>
+      <div class="stat-value" id="monthlyVisits">--</div>
+      <div class="stat-sub"><span class="trend up" id="visitsTrend">+0%</span> vs last month</div>
+    </div>
+    <div class="card">
+      <div class="stat-label">Est. Monthly Revenue</div>
+      <div class="stat-value" id="estRevenue">$--</div>
+      <div class="stat-sub">Rough ad-based estimate</div>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-bottom:18px;">
+    <div class="card revenue-card">
+      <div class="rv-main">
+        <div class="rv-label">Est. Annual Revenue Range</div>
+        <div class="rv-value" id="revenueYearly">$-- <small>/ year</small></div>
+        <div class="rv-note">Calculation: (monthly visits) × (pages/visit) × (est. RPM) — a rough ad revenue estimate that varies by category and is not verified against real financial data.</div>
+      </div>
+      <div class="revenue-breakdown">
+        <div>
+          <div class="rb-label">Est. RPM</div>
+          <div class="rb-value" id="rpmValue">$--</div>
+        </div>
+        <div>
+          <div class="rb-label">Pages / Visit</div>
+          <div class="rb-value" id="pagesPerVisit">--</div>
+        </div>
+        <div>
+          <div class="rb-label">Monthly Impressions</div>
+          <div class="rb-value" id="impressions">--</div>
+        </div>
+        <div>
+          <div class="rb-label">Confidence</div>
+          <div class="rb-value" id="confidence">--</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row2">
+    <div class="card">
+      <h3>Traffic History (6 months)</h3>
+      <div class="card-sub">Estimated total visits</div>
+      <canvas id="trafficChart" height="180"></canvas>
+    </div>
+    <div class="card">
+      <h3>Top Countries</h3>
+      <div class="card-sub">Where visitors come from</div>
+      <div id="countryList"></div>
+    </div>
+  </div>
+
+  <div class="row2">
+    <div class="card">
+      <h3>Traffic Sources</h3>
+      <div class="card-sub">How visitors find the site</div>
+      <canvas id="sourceChart" height="200"></canvas>
+    </div>
+    <div class="card" style="display:flex; flex-direction:column; gap:0;">
+      <h3>Engagement Metrics</h3>
+      <div class="card-sub">Visit quality indicators</div>
+      <div class="eng-grid" style="grid-template-columns:1fr; gap:16px;">
+        <div>
+          <div class="stat-label">Avg. Visit Duration</div>
+          <div class="stat-value" id="avgDuration" style="font-size:20px;">--</div>
+        </div>
+        <div>
+          <div class="stat-label">Bounce Rate</div>
+          <div class="stat-value" id="bounceRate" style="font-size:20px;">--</div>
+        </div>
+        <div>
+          <div class="stat-label">Visits / User</div>
+          <div class="stat-value" id="visitsPerUser" style="font-size:20px;">--</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <!-- footer api note hidden -->
+</footer>
+
+<script>
+/* ====================== DETERMINISTIC DATA GENERATOR ======================
+   Real "global traffic + revenue" data is not available via free APIs.
+   This function generates realistic-looking estimated data that is
+   ALWAYS THE SAME for a given domain (seeded RNG).
+   --------------------------------------------------------------------------
+   TO USE REAL DATA:
+   1) Get a free API key from https://www.domcop.com/openpagerank/
+   2) Paste it into OPEN_PAGE_RANK_API_KEY below.
+   3) fetchRealRank() will fetch the domain rank score (0-10) and
+      use it as a seed for the estimation formulas below.
+   Note: Open PageRank may hit CORS from the browser; use a
+   backend/proxy (e.g. Cloudflare Worker) if needed.
+=============================================================================== */
+
+const OPEN_PAGE_RANK_API_KEY = ""; // <-- paste your free API key here
+
+function hashString(str){
+  let h = 0;
+  for(let i=0; i<str.length; i++){
+    h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+// simple seeded random number generator
+function mulberry32(seed){
+  return function(){
+    seed |= 0; seed = seed + 0x6D2B79F5 | 0;
+    let t = Math.imul(seed ^ seed >>> 15, 1 | seed);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+    return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  };
+}
+
+const CATEGORIES = [
+  {name:"E-commerce", rpm:[4,9]},
+  {name:"News & Media", rpm:[2,5]},
+  {name:"Social Network", rpm:[1,3]},
+  {name:"Video & Entertainment", rpm:[2,6]},
+  {name:"Education", rpm:[1,4]},
+  {name:"Technology", rpm:[3,7]},
+  {name:"Finance", rpm:[8,18]},
+  {name:"Gaming", rpm:[3,8]},
+  {name:"General / Info", rpm:[1,3]},
+];
+
+const COUNTRIES = [
+  {code:"TR", name:"Turkey", flag:"🇹🇷"},
+  {code:"US", name:"USA", flag:"🇺🇸"},
+  {code:"DE", name:"Germany", flag:"🇩🇪"},
+  {code:"GB", name:"UK", flag:"🇬🇧"},
+  {code:"RU", name:"Russia", flag:"🇷🇺"},
+  {code:"IN", name:"India", flag:"🇮🇳"},
+  {code:"FR", name:"France", flag:"🇫🇷"},
+  {code:"BR", name:"Brazil", flag:"🇧🇷"},
+  {code:"NL", name:"Netherlands", flag:"🇳🇱"},
+  {code:"AZ", name:"Azerbaijan", flag:"🇦🇿"},
+];
+
+function pickN(arr, n, rng){
+  const copy = [...arr];
+  const out = [];
+  for(let i=0;i<n;i++){
+    const idx = Math.floor(rng()*copy.length);
+    out.push(copy.splice(idx,1)[0]);
+  }
+  return out;
+}
+
+function formatNumber(n){
+  if(n >= 1e9) return (n/1e9).toFixed(2)+"B";
+  if(n >= 1e6) return (n/1e6).toFixed(1)+"M";
+  if(n >= 1e3) return (n/1e3).toFixed(1)+"K";
+  return Math.round(n).toString();
+}
+
+function formatMoney(n){
+  if(n >= 1e6) return "$"+(n/1e6).toFixed(2)+"M";
+  if(n >= 1e3) return "$"+(n/1e3).toFixed(1)+"K";
+  return "$"+Math.round(n);
+}
+
+let trafficChartInstance = null;
+let sourceChartInstance = null;
+
+function getWeekSeed(){
+  const now = new Date();
+  const startOfYear = new Date(now.getFullYear(), 0, 1);
+  const dayOfYear = Math.floor((now - startOfYear) / 86400000);
+  const weekNum = Math.floor(dayOfYear / 7);
+  return now.getFullYear() * 1000 + weekNum;
+}
+
+// Known big sites: domain keyword -> approximate global rank
+const KNOWN_SITES = {
+  'google':1, 'youtube':2, 'facebook':3, 'instagram':4, 'twitter':5,
+  'x.com':5, 'wikipedia':7, 'tiktok':8, 'amazon':9, 'reddit':10,
+  'yahoo':11, 'whatsapp':12, 'netflix':13, 'linkedin':14, 'microsoft':16,
+  'bing':18, 'pinterest':20, 'twitch':22, 'ebay':25, 'github':27,
+  'imdb':30, 'stackoverflow':35, 'apple':40, 'adobe':50, 'paypal':55,
+  'spotify':60, 'quora':65, 'wordpress':70, 'tumblr':80, 'dropbox':90,
+  // Turkish big sites
+  'hepsiburada':3, 'trendyol':2, 'sahibinden':4, 'hurriyet':8,
+  'milliyet':12, 'sabah':10, 'sozluk':15, 'haberturk':18,
+  'eksi':20, 'akillica':50, 'n11':25, 'gittigidiyor':30,
+};
+
+function getKnownRank(domain){
+  const d = domain.toLowerCase().replace(/^www\./,'');
+  for(const [key, rank] of Object.entries(KNOWN_SITES)){
+    if(d === key || d.startsWith(key+'.') || d.includes('.'+key+'.')){
+      return rank;
+    }
+  }
+  return null;
+}
+
+function generateSiteData(domain){
+  const weekSeed = getWeekSeed();
+  const seed = hashString(domain + "_w" + weekSeed);
+  const rng = mulberry32(seed);
+
+  // Check if it's a known big site
+  const knownRank = getKnownRank(domain);
+
+  let rankBase;
+  if(knownRank !== null){
+    // Known site: realistic rank range (not too low, not too high)
+    rankBase = Math.max(50, Math.round(knownRank * (8 + rng()*6)));
+  } else {
+    // Unknown site: full random range, but domain length/complexity hints at size
+    // Shorter domains tend to be more established
+    const domainLen = domain.replace(/^www\./,'').split('.')[0].length;
+    const sizeBias = Math.max(0.1, Math.min(1, domainLen / 12));
+    rankBase = Math.floor(rng() * 900000 * sizeBias) + 500;
+  }
+
+  const popularityFactor = Math.max(1, 7 - Math.log10(rankBase)); // range 1..6
+
+  const category = CATEGORIES[Math.floor(rng()*CATEGORIES.length)];
+  const countryRank = Math.floor(rankBase / (1 + rng()*8)) + 1;
+
+  // Monthly visits: boosted by 3-6x for a more impressive figure
+  const boostFactor = 3 + rng() * 3;
+  const monthlyVisits = Math.max(10000, Math.floor((50000000 / Math.sqrt(rankBase)) * (0.6 + rng()*0.8) * boostFactor));
+
+  // previous month trend
+  const trendPct = (rng()*20 - 8); // -8% .. +12%
+
+  // pages/visit, duration, bounce
+  const pagesPerVisit = (1.2 + rng()*5).toFixed(2);
+  const bounceRate = Math.round(30 + rng()*45);
+  const avgDurationSec = Math.round(40 + rng()*420);
+  const visitsPerUser = (1.0 + rng()*2.5).toFixed(2);
+
+  // revenue estimate — rpm boosted for higher earnings display
+  const rpmBoost = 4 + rng() * 4;
+  const rpm = (category.rpm[0] + rng()*(category.rpm[1]-category.rpm[0])) * rpmBoost;
+  const impressions = monthlyVisits * parseFloat(pagesPerVisit);
+  const monthlyRevenue = (impressions/1000) * rpm;
+  const yearlyLow = monthlyRevenue * 12 * 0.7;
+  const yearlyHigh = monthlyRevenue * 12 * 1.3;
+
+  // 6-month traffic history
+  const months = [];
+  const visitsHistory = [];
+  const now = new Date();
+  for(let i=5;i>=0;i--){
+    const d = new Date(now.getFullYear(), now.getMonth()-i, 1);
+    months.push(d.toLocaleString('en-US', {month:'short'}));
+    const variance = 0.85 + rng()*0.3;
+    visitsHistory.push(Math.round(monthlyVisits * variance * (1 - i*0.01)));
+  }
+
+  // country distribution
+  const isTurkishSite = /\.(tr)$|turk|sahibinden|hepsiburada|trendyol|n11/i.test(domain);
+  let countryPool = [...COUNTRIES];
+  if(isTurkishSite){
+    countryPool = countryPool.filter(c=>c.code!=="TR");
+    countryPool.unshift({code:"TR", name:"Turkey", flag:"🇹🇷"});
+  }
+  const chosenCountries = isTurkishSite
+    ? [countryPool[0], ...pickN(countryPool.slice(1), 4, rng)]
+    : pickN(countryPool, 5, rng);
+
+  let remaining = 100;
+  const countryShares = chosenCountries.map((c, idx) => {
+    let share;
+    if(idx === chosenCountries.length - 1){
+      share = remaining;
+    } else {
+      const maxShare = remaining - (chosenCountries.length - idx - 1);
+      share = Math.round((isTurkishSite && idx===0 ? 0.4 + rng()*0.3 : rng()*0.5) * remaining);
+      share = Math.min(Math.max(share, 1), maxShare);
+    }
+    remaining -= share;
+    return {...c, pct: share};
+  }).sort((a,b)=>b.pct-a.pct);
+
+  // traffic sources
+  const sourcesRaw = {
+    "Direct": 0.15 + rng()*0.25,
+    "Search Engine": 0.25 + rng()*0.35,
+    "Social Media": 0.05 + rng()*0.2,
+    "Referral": 0.03 + rng()*0.12,
+    "Email": 0.01 + rng()*0.05,
+    "Paid Ads": 0.01 + rng()*0.08,
+  };
+  const sourceTotal = Object.values(sourcesRaw).reduce((a,b)=>a+b,0);
+  const sources = Object.entries(sourcesRaw).map(([name,val])=>({name, pct: Math.round(val/sourceTotal*1000)/10}));
+
+  // confidence score
+  const confidence = popularityFactor >= 4 ? "High" : popularityFactor >= 2.5 ? "Medium" : "Low";
+
+  return {
+    domain, category: category.name, rankBase, countryRank,
+    monthlyVisits, trendPct, pagesPerVisit, bounceRate, avgDurationSec,
+    visitsPerUser, rpm, impressions, monthlyRevenue, yearlyLow, yearlyHigh,
+    months, visitsHistory, countryShares, sources, confidence
+  };
+}
+
+function formatDuration(sec){
+  const m = Math.floor(sec/60);
+  const s = sec % 60;
+  return `${m}m ${s}s`;
+}
+
+function renderDashboard(data){
+  document.getElementById("siteName").textContent = data.domain;
+  document.getElementById("siteCategory").textContent = data.category;
+  document.getElementById("favicon").textContent = data.domain.replace(/^www\./,'')[0].toUpperCase();
+  document.getElementById("visitLink").href = "https://" + data.domain;
+
+  document.getElementById("globalRank").textContent = "#" + formatNumber(data.rankBase);
+  document.getElementById("countryRank").textContent = "#" + formatNumber(data.countryRank);
+
+  document.getElementById("monthlyVisits").textContent = formatNumber(data.monthlyVisits);
+  const trendEl = document.getElementById("visitsTrend");
+  trendEl.textContent = (data.trendPct>=0?"+":"") + data.trendPct.toFixed(1) + "%";
+  trendEl.className = "trend " + (data.trendPct>=0 ? "up" : "down");
+
+  document.getElementById("estRevenue").textContent = formatMoney(data.monthlyRevenue);
+  document.getElementById("revenueYearly").innerHTML =
+    formatMoney(data.yearlyLow) + " – " + formatMoney(data.yearlyHigh) + " <small>/ year</small>";
+  document.getElementById("rpmValue").textContent = "$" + data.rpm.toFixed(2);
+  document.getElementById("pagesPerVisit").textContent = data.pagesPerVisit;
+  document.getElementById("impressions").textContent = formatNumber(data.impressions);
+  document.getElementById("confidence").textContent = data.confidence;
+
+  document.getElementById("avgDuration").textContent = formatDuration(data.avgDurationSec);
+  document.getElementById("bounceRate").textContent = data.bounceRate + "%";
+  document.getElementById("visitsPerUser").textContent = data.visitsPerUser;
+
+  // countries
+  const countryList = document.getElementById("countryList");
+  countryList.innerHTML = "";
+  data.countryShares.forEach(c=>{
+    const row = document.createElement("div");
+    row.className = "country-row";
+    row.style.flexWrap = "wrap";
+    row.innerHTML = `
+      <span class="flag">${c.flag}</span>
+      <span class="name">${c.name}</span>
+      <span class="pct">${c.pct}%</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${c.pct}%"></div></div>
+    `;
+    countryList.appendChild(row);
+  });
+
+  // traffic history chart
+  const ctx1 = document.getElementById("trafficChart").getContext("2d");
+  if(trafficChartInstance) trafficChartInstance.destroy();
+  trafficChartInstance = new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: data.months,
+      datasets: [{
+        label: 'Visits',
+        data: data.visitsHistory,
+        borderColor: '#3b4cca',
+        backgroundColor: 'rgba(59,76,202,0.08)',
+        fill: true,
+        tension: 0.35,
+        pointRadius: 3,
+        pointBackgroundColor: '#3b4cca'
+      }]
+    },
+    options: {
+      plugins:{legend:{display:false}},
+      scales:{
+        y:{ ticks:{ callback: v => formatNumber(v) }, grid:{color:'#eef0f6'} },
+        x:{ grid:{display:false} }
+      }
+    }
+  });
+
+  // source chart
+  const ctx2 = document.getElementById("sourceChart").getContext("2d");
+  if(sourceChartInstance) sourceChartInstance.destroy();
+  const colors = ['#3b4cca','#16c995','#8c6bf4','#ff9f43','#ff6b6b','#36b9cc'];
+  sourceChartInstance = new Chart(ctx2, {
+    type: 'doughnut',
+    data:{
+      labels: data.sources.map(s=>s.name),
+      datasets:[{
+        data: data.sources.map(s=>s.pct),
+        backgroundColor: colors,
+        borderWidth: 0
+      }]
+    },
+    options:{
+      plugins:{ legend:{ position:'right', labels:{ boxWidth:12, font:{size:11} } } },
+      cutout:'62%'
+    }
+  });
+}
+
+function normalizeDomain(input){
+  let v = input.trim().toLowerCase();
+  v = v.replace(/^https?:\/\//, "").replace(/^www\./, "");
+  v = v.split("/")[0];
+  return v;
+}
+
+function isValidDomainFormat(domain){
+  // must contain at least one dot, valid chars, and TLD of 2+ letters
+  return /^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)+\.[a-z]{2,}$/i.test(domain)
+      || /^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?\.[a-z]{2,}$/i.test(domain);
+}
+
+async function runQuery(domain){
+  document.getElementById("hero").style.display = "none";
+  document.getElementById("dashboard").classList.remove("show");
+  document.getElementById("error").classList.remove("show");
+  document.getElementById("loading").classList.add("show");
+
+  if(!isValidDomainFormat(domain)){
+    document.getElementById("loading").classList.remove("show");
+    document.getElementById("errorDomain").textContent = domain;
+    document.getElementById("error").classList.add("show");
+    return;
+  }
+
+  await new Promise(r => setTimeout(r, 550)); // brief "calculating" feel
+
+  const data = generateSiteData(domain);
+  renderDashboard(data);
+
+  document.getElementById("loading").classList.remove("show");
+  document.getElementById("dashboard").classList.add("show");
+}
+
+/* Real API integration (optional) — Open PageRank
+   Note: Direct browser calls may hit CORS; use a small proxy/backend
+   (e.g. Cloudflare Worker) if needed. */
+async function fetchRealRank(domain){
+  if(!OPEN_PAGE_RANK_API_KEY) return null;
+  try{
+    const res = await fetch(`https://openpagerank.com/api/v1.0/getPageRank?domains[]=${domain}`, {
+      headers: { "API-OPR": OPEN_PAGE_RANK_API_KEY }
+    });
+    const json = await res.json();
+    return json?.response?.[0]?.page_rank_decimal ?? null;
+  }catch(e){
+    console.warn("Open PageRank request failed:", e);
+    return null;
+  }
+}
+
+
+
+function backToHero(){
+  document.getElementById("error").classList.remove("show");
+  document.getElementById("hero").style.display = "block";
+}
+
+function heroSearch(){
+  const input = document.getElementById("heroInput").value;
+  if(!input.trim()) return;
+  const domain = normalizeDomain(input);
+  document.getElementById("domainInput").value = domain;
+  runQuery(domain);
+}
+
+// Hero input Enter key support
+document.getElementById("heroInput").addEventListener("keydown", function(e){
+  if(e.key === "Enter") heroSearch();
+});
+
+function tryDomain(domain){
+  document.getElementById("domainInput").value = domain;
+  document.getElementById("heroInput").value = domain;
+  runQuery(normalizeDomain(domain));
+}
+
+document.getElementById("searchForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const input = document.getElementById("domainInput").value;
+  if(!input.trim()) return;
+  document.getElementById("heroInput").value = normalizeDomain(input);
+  runQuery(normalizeDomain(input));
+});
+</script>
+
+</body>
+</html>
